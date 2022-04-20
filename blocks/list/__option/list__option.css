@@ -1,0 +1,9 @@
+.list__option {
+    margin: 10px, auto, 10px, 10px;
+}
+
+.list__option:hover {
+    cursor: pointer;
+    background-color: #71878d;
+    color: aliceblue;
+}

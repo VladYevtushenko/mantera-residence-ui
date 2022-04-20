@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./pages/index.css">
+    <title>Residences</title>
+    <script src="./vendor/vendor.js"></script>
+</head>
+
+<body class="body">
+    <section class="pagecontent">
+        <div class="container-fluid">
+            <div id="select-ui" class="select-ui">
+                <div class="select-ui__backdrop" data-type="backdrop"></div>
+                <div class="select-ui__input--multiselect" data-type="input">
+                    <span class="select-ui__input-truncate">Магазины в <span class="select-ui__input-link"
+                            data-type="value">Все города</span></span>
+                </div>
+                <div class="select-ui__dropdown select-ui__dropdown--multiselect">
+
+                </div>
+            </div>
+            <div class="slider-container slider--toleft">
+                <div class="block-img slider" id="slider--Residences">
+                    <div class="img__item"><img
+                            src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/ba/29/5c/img-worlds-of-adventure.jpg?w=1200&h=-1&s=1"
+                            class="img-fluid" alt="Residence"></div>
+                    <div class="img__item"><img
+                            src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/ba/29/5c/img-worlds-of-adventure.jpg?w=1200&h=-1&s=1"
+                            class="img-fluid" alt="Residence"></div>
+                </div>
+            </div>
+            <!-- <ul class="list" name="estate_type">
+                <li class="list__option">РЕЗЕДНЦИИ</li>
+                <li class="list__option">ПЕНТХАУСЫ</li>
+                <li class="list__option">УРБАН-ВИЛЛЫ</li>
+            </ul>
+            <ul class="list" name="estate_type">
+                <li class="list__option">РЕЗЕДНЦИЯ-СТУДИЯ</li>
+                <li class="list__option">РЕЗЕДНЦИЯ С ОДНОЙ СПАЛЬНЕЙ</li>
+                <li class="list__option">РЕЗЕДНЦИЯ С ДВУМЯ СПАЛЬНЯМИ</li>
+                <li class="list__option">РЕЗЕДНЦИЯ С ТРЕМЯ СПАЛЬНЯМИ</li>
+            </ul> -->
+        </div>
+    </section>
+    <script src="./vendor/select-ui/select-ui.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const select = new SelectUI('#select-ui', {
+                placeholder: 'Выберите элемент',
+                selectedId: '2',
+                errorText: 'Выберите время*',
+                nameSelect: 'select-time',
+                selectedDataProp: '1',
+                data: [
+                    { id: '1', value: '1', dataProp: '0' },
+                    { id: '2', value: '2', dataProp: '1' },
+                    { id: '3', value: '3', dataProp: '2' },
+                ],
+                onSelect(item) {
+                    console.log('selected Item', item)
+                }
+            });
+            $('#slider--Residences').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true,
+                infinite: true,
+                autoplay: false
+            });
+        })
+
+
+    </script>
+</body>
+
+</html>
