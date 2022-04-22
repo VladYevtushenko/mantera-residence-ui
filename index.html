@@ -8,146 +8,139 @@
     <link rel="stylesheet" href="./assets/pages/index.css">
     <title>Residences</title>
     <script src="./assets/vendor/vendor.js"></script>
-    <style>
-        [class^=col] {
+    <!-- <style>
+        /* [class^=col] {
             margin: 10px;
             padding: 10px;
-        }
-        .col3 {
+        } */
+        /* .col3 {
             width: 25%;
-        }
-        .col6 {
+        } */
+        /* .col6 {
             width: 50%;
-        }
-        .apartments {
-            width: 100%;
+            margin-left: 50px;
+        } */
+        /* .apartments {
+            width: 46%;
         }
         .apartments td {
             padding: 10px;
-            border-bottom: 1px solid #f1f1f1;
-        }
-        div.slider-container {
-            margin-left: 0;
-        }
-    </style>
+            border-bottom: 1px solid #567074;
+        } */
+    </style> -->
 </head>
-
 <body class="body">
     <section class="pagecontent">
         <div class="container-fluid">
-            <div>
-                <div style="display: flex;">
-                    <div class="col3">
-                        <div id="select-ui" class="select-ui">
-                            <div class="select-ui__backdrop" data-type="backdrop"></div>
-                            <div class="select-ui__input--multiselect" data-type="input">
-                                <span class="select-ui__input-truncate">Магазины в <span class="select-ui__input-link"
-                                        data-type="value">Все города</span></span>
-                            </div>
-                            <div class="select-ui__dropdown select-ui__dropdown--multiselect">
-                        
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col3">
-                        <div id="select-ui-2" class="select-ui">
-                            <div class="select-ui__backdrop" data-type="backdrop"></div>
-                            <div class="select-ui__input--multiselect" data-type="input">
-                                <span class="select-ui__input-truncate">Магазины в <span class="select-ui__input-link"
-                                        data-type="value">Все города</span></span>
-                            </div>
-                            <div class="select-ui__dropdown select-ui__dropdown--multiselect">
-                        
-                            </div>
-                        </div>
+            <div class="row_visible">
+                <div class="resednce-selector">
+                    <div id="select-ui-estate-type" class="select-ui">
+                        <div class="select-ui__backdrop" data-type="backdrop"></div>
+                        <div class="select-ui__input--multiselect" data-type="input"></div>
+                        <div class="select-ui__dropdown select-ui__dropdown--multiselect"></div>
                     </div>
                 </div>
-                <div style="display: flex;">
-                    <div class="col6">
-                        <table class="apartments">
-                            <tr>
-                                <td>text</td>
-                                <td>text</td>
-                                <td>text</td>
-                                <td>text</td>
-                            </tr>
-                            <tr>
-                                <td>text</td>
-                                <td>text</td>
-                                <td>text</td>
-                                <td>text</td>
-                            </tr>
-                            <tr>
-                                <td>text</td>
-                                <td>text</td>
-                                <td>text</td>
-                                <td>text</td>
-                            </tr>
-                            <tr>
-                                <td>text</td>
-                                <td>text</td>
-                                <td>text</td>
-                                <td>text</td>
-                            </tr>
-                            <tr>
-                                <td>text</td>
-                                <td>text</td>
-                                <td>text</td>
-                                <td>text</td>
-                            </tr>
-                            <tr>
-                                <td>text</td>
-                                <td>text</td>
-                                <td>text</td>
-                                <td>text</td>
-                            </tr>
-                            <tr>
-                                <td>text</td>
-                                <td>text</td>
-                                <td>text</td>
-                                <td>text</td>
-                            </tr>
-                            <tr>
-                                <td>text</td>
-                                <td>text</td>
-                                <td>text</td>
-                                <td>text</td>
-                            </tr>
-                            <tr>
-                                <td>text</td>
-                                <td>text</td>
-                                <td>text</td>
-                                <td>text</td>
-                            </tr>
-                            <tr>
-                                <td>text</td>
-                                <td>text</td>
-                                <td>text</td>
-                                <td>text</td>
-                            </tr>
-                        </table>
+                <div class="resednce-selector_size">
+                    <div id="select-ui-estate-size" class="select-ui">
+                        <div class="select-ui__backdrop" data-type="backdrop"></div>
+                        <div class="select-ui__input--multiselect" data-type="input"></div>
+                        <div class="select-ui__dropdown select-ui__dropdown--multiselect"></div>
                     </div>
-                    <div class="col6">
-                        <div id="slidermy" class="slider-container slider--toleft">
-                            <div class="block-img slider" id="slider--Residences">
-                                <div class="img__item"><img
-                                    src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/ba/29/5c/img-worlds-of-adventure.jpg?w=1200&h=-1&s=1"
-                                    class="img-fluid" alt="Residence"></div>
-                                <div class="img__item"><img
-                                    src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/ba/29/5c/img-worlds-of-adventure.jpg?w=1200&h=-1&s=1"
-                                    class="img-fluid" alt="Residence"></div>
-                            </div>
-                        </div>
-                        <div id="image" style="display: none;">
-                            <div style="width: 100%; height: 300px; background-color: #f0f0f0; margin-bottom: 20px;"></div>
-                            <div style=" background: #f0f0f0;"></div>
-                                <div>PDF</div>
-                                <div>LINK</div><br />
-                                <div>FORM</div>
-                                <div>CALL</div>
-                            </div>
-                        </div>
+                </div>
+                <div id="slidermy" class="slider__container slider--toleft">
+                    <div class="block-img slider" id="slider--Residences">
+                        <div class="img__item"><img
+                            src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/ba/29/5c/img-worlds-of-adventure.jpg?w=1200&h=-1&s=1"
+                            class="img-fluid" alt="Residence"></div>
+                        <div class="img__item"><img
+                            src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/ba/29/5c/img-worlds-of-adventure.jpg?w=1200&h=-1&s=1"
+                            class="img-fluid" alt="Residence"></div>
                     </div>
+                    <p class="info">РЕЗИДЕНЦИИ MANTERA SEAVIEW RESIDENCE ПРЕДВОСХИЩАЮТ СЦЕНАРИИ ВАШЕЙ ЖИЗНИ. СТУДИИ С ВИДОМ НА МОРЕ И НАПОЛНЕННЫЕ ВОЗДУХОМ ДВУХКОМНАТНЫЕ ПРОСТРАНСТВА, ТРЕХ- И ЧЕТЫРЕХКОМНАТНЫЕ РЕШЕНИЯ ДЛЯ СЕМЕЙ И ЦЕНИТЕЛЕЙ ПРОСТОРА — ВЫБЕРИТЕ ВАШЕ ВЛАДЕНИЕ НА ПОБЕРЕЖЬЕ.</p>
+                </div>
+            </div>
+            <div class="row-hidden" id="bottom-row">
+                <table class="residence-info-table">
+                    <template id="table-elemen">
+                        <tr class="element-hover">
+                            <td class="residence-info-table__rows" id="residence-nomber"></td>
+                            <td class="residence-info-table__rows" id="residence-floor"></td>
+                            <td class="residence-info-table__rows" id="residence-room-amount"></td>
+                            <td class="residence-info-table__rows" id="residence-footage"></td>
+                        </tr>
+                    </template>
+                    <tr class="element-hover">
+                        <td class="residence-info-table__rows">№201</td>
+                        <td class="residence-info-table__rows">ЭТАЖ: 2</td>
+                        <td class="residence-info-table__rows">Резиденция с одной спальней</td>
+                        <td class="residence-info-table__rows">53,07 кв.м</td>
+                    </tr>
+                    <tr class="element-hover">
+                        <td class="residence-info-table__rows">№201</td>
+                        <td class="residence-info-table__rows">ЭТАЖ: 2</td>
+                        <td class="residence-info-table__rows">Резиденция с одной спальней</td>
+                        <td class="residence-info-table__rows">53,07 кв.м</td>
+                    </tr>
+                    <tr class="element-hover">
+                        <td class="residence-info-table__rows">№201</td>
+                        <td class="residence-info-table__rows">ЭТАЖ: 2</td>
+                        <td class="residence-info-table__rows">Резиденция с одной спальней</td>
+                        <td class="residence-info-table__rows">53,07 кв.м</td>
+                    </tr>
+                    <tr class="element-hover">
+                        <td class="residence-info-table__rows">№201</td>
+                        <td class="residence-info-table__rows">ЭТАЖ: 2</td>
+                        <td class="residence-info-table__rows">Резиденция с одной спальней</td>
+                        <td class="residence-info-table__rows">53,07 кв.м</td>
+                    </tr>
+                    <tr class="element-hover">
+                        <td class="residence-info-table__rows">№201</td>
+                        <td class="residence-info-table__rows">ЭТАЖ: 2</td>
+                        <td class="residence-info-table__rows">Резиденция с одной спальней</td>
+                        <td class="residence-info-table__rows">53,07 кв.м</td>
+                    </tr>
+                    <tr class="element-hover">
+                        <td class="residence-info-table__rows">№201</td>
+                        <td class="residence-info-table__rows">ЭТАЖ: 2</td>
+                        <td class="residence-info-table__rows">Резиденция с одной спальней</td>
+                        <td class="residence-info-table__rows">53,07 кв.м</td>
+                    </tr>
+                    <tr class="element-hover">
+                        <td class="residence-info-table__rows">№201</td>
+                        <td class="residence-info-table__rows">ЭТАЖ: 2</td>
+                        <td class="residence-info-table__rows">Резиденция с одной спальней</td>
+                        <td class="residence-info-table__rows">53,07 кв.м</td>
+                    </tr>
+                    <tr class="element-hover">
+                        <td class="residence-info-table__rows">№201</td>
+                        <td class="residence-info-table__rows">ЭТАЖ: 2</td>
+                        <td class="residence-info-table__rows">Резиденция с одной спальней</td>
+                        <td class="residence-info-table__rows">53,07 кв.м</td>
+                    </tr>
+                    <tr class="element-hover">
+                        <td class="residence-info-table__rows">№201</td>
+                        <td class="residence-info-table__rows">ЭТАЖ: 2</td>
+                        <td class="residence-info-table__rows">Резиденция с одной спальней</td>
+                        <td class="residence-info-table__rows">53,07 кв.м</td>
+                    </tr>
+                    <tr class="element-hover">
+                        <td class="residence-info-table__rows">№201</td>
+                        <td class="residence-info-table__rows">ЭТАЖ: 2</td>
+                        <td class="residence-info-table__rows">Резиденция с одной спальней</td>
+                        <td class="residence-info-table__rows">53,07 кв.м</td>
+                    </tr>
+                </table>
+                <div class="layout-container" id="image">
+                    <img class="layout-img" src="https://mantera-residence.ru/upload/iblock/273/xg8iy2y3nlljcuuy9rukjoqynyn6w6ji.png" alt="layout">
+                    <!-- <div style="width: 100%; height: 300px; background-color: #f0f0f0; margin-bottom: 20px;"></div> -->
+                    <nav>
+                        <ul class="nav">
+                            <li class="nav__item element-hover"><a href="#">Скачать .PDF</a></li>
+                            <li class="nav__item element-hover"><a href="#">вид из резиденции</a></li>
+                            <li class="nav__item element-hover"><a href="#">оставить заявку</a></li>
+                            <li class="nav__item element-hover"><a href="#">позвонить</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>
@@ -155,32 +148,32 @@
     <script src="./assets/vendor/select-ui/select-ui.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const select = new SelectUI('#select-ui', {
+            const select = new SelectUI('#select-ui-estate-type', {
                 placeholder: 'Выберите элемент',
                 selectedId: '2',
                 errorText: 'Выберите время*',
                 nameSelect: 'select-time',
                 selectedDataProp: '1',
                 data: [
-                    { id: '1', value: '1', dataProp: '0' },
-                    { id: '2', value: '2', dataProp: '1' },
-                    { id: '3', value: '3', dataProp: '2' },
+                    { id: '1', value: 'Резиденции', dataProp: '0' },
+                    { id: '2', value: 'Пентхаусы', dataProp: '1' },
+                    { id: '3', value: 'Урбан-виллы', dataProp: '2' },
                 ],
                 onSelect(item) {
                     document.getElementById("slidermy").style.display = 'none';
-                    document.getElementById("image").style.display = 'block';
+                    document.getElementById("bottom-row").classList.add('row_visible');
                 }
             });
-            const select2 = new SelectUI('#select-ui-2', {
+            const select2 = new SelectUI('#select-ui-estate-size', {
                 placeholder: 'Выберите элемент',
                 selectedId: '2',
                 errorText: 'Выберите время*',
                 nameSelect: 'select-time',
                 selectedDataProp: '1',
                 data: [
-                    { id: '1', value: '1', dataProp: '0' },
-                    { id: '2', value: '2', dataProp: '1' },
-                    { id: '3', value: '3', dataProp: '2' },
+                    { id: '1', value: 'Резиденция с одной спальней', dataProp: '0' },
+                    { id: '2', value: 'Резиденция с двумя спальнями', dataProp: '1' },
+                    { id: '3', value: 'Резиденция с одной спальней', dataProp: '2' },
                 ],
                 onSelect(item) {
                     console.log('selected Item', item)

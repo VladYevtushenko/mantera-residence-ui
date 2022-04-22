@@ -1,0 +1,5 @@
+.element-hover:hover {
+    cursor: pointer;
+    background-color: rgba(113, 135, 141, 0.15);
+    transition: color 0.3s ease;
+}

@@ -1,0 +1,8 @@
+.slider__container {
+    width: 50%;
+    margin-left: 50px;
+    padding-left: 50px;
+    margin-top: 95px;
+    align-self: flex-end;
+    justify-self: flex-end;
+}

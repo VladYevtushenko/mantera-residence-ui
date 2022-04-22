@@ -1,0 +1,6 @@
+.layout-img {
+    object-fit: contain;
+    object-position: center;
+    width: 80%;
+    padding-bottom: 30px;
+}
