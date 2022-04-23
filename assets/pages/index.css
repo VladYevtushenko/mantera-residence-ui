@@ -1,3 +1,4 @@
+@import url(../fonts/fonts.css);
 @import url(../pages/page.css);
 @import url(../pages/template.css);
 @import url(../blocks/element-hover/element-hover.css);
@@ -19,4 +20,4 @@
 @import url(../blocks/nav/nav.css);
 @import url(../blocks/nav/__item/nav__item.css);
 @import url(../blocks/nav/__item/_color/nav__item_color.css);
-@import url(../blocks/link/link.css);
+

@@ -8,26 +8,6 @@
     <link rel="stylesheet" href="./assets/pages/index.css">
     <title>Residences</title>
     <script src="./assets/vendor/vendor.js"></script>
-    <!-- <style>
-        /* [class^=col] {
-            margin: 10px;
-            padding: 10px;
-        } */
-        /* .col3 {
-            width: 25%;
-        } */
-        /* .col6 {
-            width: 50%;
-            margin-left: 50px;
-        } */
-        /* .apartments {
-            width: 46%;
-        }
-        .apartments td {
-            padding: 10px;
-            border-bottom: 1px solid #567074;
-        } */
-    </style> -->
 </head>
 <body class="body">
     <section class="pagecontent">
@@ -63,11 +43,11 @@
             </div>
             <div class="row_hidden row_bottom" id="bottom-row">
                 <table class="residence-info-table">
-                    <template id="table-elemen">
+                    <template id="table-element">
                         <tr class="element-hover">
-                            <td class="residence-info-table__rows" id="residence-nomber"></td>
-                            <td class="residence-info-table__rows" id="residence-floor"></td>
-                            <td class="residence-info-table__rows" id="residence-room-amount"></td>
+                            <td class="residence-info-table__rows" id="number"></td>
+                            <td class="residence-info-table__rows" id="floor"></td>
+                            <td class="residence-info-table__rows" id="name"></td>
                             <td class="residence-info-table__rows" id="residence-footage"></td>
                         </tr>
                     </template>
@@ -134,13 +114,12 @@
                 </table>
                 <div class="layout-container" id="image">
                     <img class="layout-img" src="https://mantera-residence.ru/upload/iblock/273/xg8iy2y3nlljcuuy9rukjoqynyn6w6ji.png" alt="layout">
-                    <!-- <div style="width: 100%; height: 300px; background-color: #f0f0f0; margin-bottom: 20px;"></div> -->
                     <nav>
                         <ul class="nav">
-                            <li class="nav__item element-hover"><a href="#">Скачать .PDF</a></li>
-                            <li class="nav__item element-hover"><a href="#">вид из резиденции</a></li>
-                            <li class="nav__item element-hover"><a href="#">оставить заявку</a></li>
-                            <li class="nav__item element-hover nav__item_color"><a href="#" class="link">позвонить</a></li>
+                            <li class="nav__item element-hover">Скачать .PDF</li>
+                            <li class="nav__item element-hover">вид из резиденци</li>
+                            <li><button class="nav__item element-hover nav__item_color">оставить заявку</button></li>
+                            <li><button class="nav__item element-hover nav__item_color">позвонить</button></li>
                         </ul>
                     </nav>
                 </div>
@@ -148,48 +127,7 @@
         </div>
     </section>
     <script src="./assets/vendor/select-ui/select-ui.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const select = new SelectUI('#select-ui-estate-type', {
-                selectedId: '2',
-                errorText: 'Выберите время*',
-                nameSelect: 'select-time',
-                selectedDataProp: '1',
-                data: [
-                    { id: '1', value: 'Резиденции', dataProp: '0' },
-                    { id: '2', value: 'Пентхаусы', dataProp: '1' },
-                    { id: '3', value: 'Урбан-виллы', dataProp: '2' },
-                ],
-                onSelect(item) {
-                    document.getElementById("slidermy").style.display = 'none';
-                    document.getElementById("bottom-row").classList.add('row_visible');
-                }
-            });
-            const select2 = new SelectUI('#select-ui-estate-size', {
-                selectedId: '2',
-                errorText: 'Выберите время*',
-                nameSelect: 'select-time',
-                selectedDataProp: '1',
-                data: [
-                    { id: '1', value: 'Резиденция с одной спальней', dataProp: '0' },
-                    { id: '2', value: 'Резиденция с двумя спальнями', dataProp: '1' },
-                    { id: '3', value: 'Резиденция с одной спальней', dataProp: '2' },
-                ],
-                onSelect(item) {
-                    console.log('selected Item', item)
-                }
-            });
-            $('#slider--Residences').slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                dots: true,
-                infinite: true,
-                autoplay: false
-            });
-        })
-
-
-    </script>
+    <script src="./assets/scripts/select&slider.js"></script>
 </body>
 
 </html>
