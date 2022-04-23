@@ -1,0 +1,11 @@
+.row_bottom {
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1000px) {
+    .row_bottom {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}

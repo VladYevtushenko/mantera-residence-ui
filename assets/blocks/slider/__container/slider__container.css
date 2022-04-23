@@ -1,8 +1,32 @@
 .slider__container {
     width: 50%;
-    margin-left: 50px;
-    padding-left: 50px;
+    padding: 50px;
     margin-top: 95px;
-    align-self: flex-end;
-    justify-self: flex-end;
+}
+
+@media screen and (max-width: 1270px) {
+    .slider__container {
+        width: 60%;
+        align-self: flex-end;
+    }
+}
+
+@media screen and (max-width: 812px) {
+    .slider__container {
+        width: 80%;
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .slider__container {
+        width: 100%;
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .slider__container {
+        padding: 20px;
+    }
 }

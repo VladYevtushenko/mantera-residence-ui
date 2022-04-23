@@ -1,0 +1,17 @@
+.row {
+    display: flex;
+}
+
+@media screen and (max-width: 1270px) {
+    .row {
+    margin: 0;
+    flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 1105px) {
+    .row {
+    margin: 0;
+    justify-content: center;
+    }
+}

@@ -203,7 +203,7 @@
 
 .select-ui__item {
     padding: 1rem 1rem 1rem 1.3rem;
-    background: transparent;
+    background: #FDFBF5;
     font-size: 12px;
     font-weight: 400;
 }
@@ -211,7 +211,8 @@
 .select-ui__item:hover {
     cursor: pointer;
     transition: color 0.3s ease;
-    background-color: rgba(113, 135, 141, 0.15);;
+    background-color: rgba(113, 135, 141);
+    color:#FDFBF5;
 }
 
 .select-ui__item.selected {

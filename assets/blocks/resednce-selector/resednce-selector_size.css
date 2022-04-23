@@ -1,4 +1,17 @@
 .resednce-selector_size {
     margin-left: 10px;
-    width: 30%;
+    min-width: 350px;
+}
+
+@media screen and (max-width: 812px) {
+    .resednce-selector_size {
+    margin: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .resednce-selector_size {
+    margin-bottom: 10px;
+    min-width: 300px;
+    }
 }

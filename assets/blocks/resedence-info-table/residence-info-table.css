@@ -2,3 +2,16 @@
     width: 46%;
     margin-top: 20px;
 }
+
+@media screen and (max-width: 1250px) {
+    .residence-info-table {
+        width: 56%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .residence-info-table {
+        width: 90%;
+    }
+}
+

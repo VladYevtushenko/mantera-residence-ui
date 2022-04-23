@@ -1,0 +1,25 @@
+.selector-container {
+    display: flex;
+    justify-content: space-between;
+    width:45%;
+}
+
+@media screen and (max-width: 1106px) {
+    .selector-container {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 812px) {
+    .selector-container {
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .selector-container {
+        width: 100%;
+    }
+}

@@ -1,0 +1,8 @@
+.nav__item_color {
+    background-color: rgb(113, 135, 141);
+    color: #f8f9fa;
+}
+
+.nav__item_color:hover {
+    background-color: #b7c1c1;
+}

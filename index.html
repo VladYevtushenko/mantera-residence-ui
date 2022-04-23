@@ -32,19 +32,21 @@
 <body class="body">
     <section class="pagecontent">
         <div class="container-fluid">
-            <div class="row_visible">
-                <div class="resednce-selector">
-                    <div id="select-ui-estate-type" class="select-ui">
-                        <div class="select-ui__backdrop" data-type="backdrop"></div>
-                        <div class="select-ui__input--multiselect" data-type="input"></div>
-                        <div class="select-ui__dropdown select-ui__dropdown--multiselect"></div>
+            <div class="row">
+                <div class="selector-container">
+                    <div class="resednce-selector">
+                        <div id="select-ui-estate-type" class="select-ui">
+                            <div class="select-ui__backdrop" data-type="backdrop"></div>
+                            <div class="select-ui__input--multiselect" data-type="input"></div>
+                            <div class="select-ui__dropdown select-ui__dropdown--multiselect"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="resednce-selector_size">
-                    <div id="select-ui-estate-size" class="select-ui">
-                        <div class="select-ui__backdrop" data-type="backdrop"></div>
-                        <div class="select-ui__input--multiselect" data-type="input"></div>
-                        <div class="select-ui__dropdown select-ui__dropdown--multiselect"></div>
+                    <div class="resednce-selector_size">
+                        <div id="select-ui-estate-size" class="select-ui">
+                            <div class="select-ui__backdrop" data-type="backdrop"></div>
+                            <div class="select-ui__input--multiselect" data-type="input"></div>
+                            <div class="select-ui__dropdown select-ui__dropdown--multiselect"></div>
+                        </div>
                     </div>
                 </div>
                 <div id="slidermy" class="slider__container slider--toleft">
@@ -59,7 +61,7 @@
                     <p class="info">РЕЗИДЕНЦИИ MANTERA SEAVIEW RESIDENCE ПРЕДВОСХИЩАЮТ СЦЕНАРИИ ВАШЕЙ ЖИЗНИ. СТУДИИ С ВИДОМ НА МОРЕ И НАПОЛНЕННЫЕ ВОЗДУХОМ ДВУХКОМНАТНЫЕ ПРОСТРАНСТВА, ТРЕХ- И ЧЕТЫРЕХКОМНАТНЫЕ РЕШЕНИЯ ДЛЯ СЕМЕЙ И ЦЕНИТЕЛЕЙ ПРОСТОРА — ВЫБЕРИТЕ ВАШЕ ВЛАДЕНИЕ НА ПОБЕРЕЖЬЕ.</p>
                 </div>
             </div>
-            <div class="row-hidden" id="bottom-row">
+            <div class="row_hidden row_bottom" id="bottom-row">
                 <table class="residence-info-table">
                     <template id="table-elemen">
                         <tr class="element-hover">
@@ -138,7 +140,7 @@
                             <li class="nav__item element-hover"><a href="#">Скачать .PDF</a></li>
                             <li class="nav__item element-hover"><a href="#">вид из резиденции</a></li>
                             <li class="nav__item element-hover"><a href="#">оставить заявку</a></li>
-                            <li class="nav__item element-hover"><a href="#">позвонить</a></li>
+                            <li class="nav__item element-hover nav__item_color"><a href="#" class="link">позвонить</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -149,7 +151,6 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const select = new SelectUI('#select-ui-estate-type', {
-                placeholder: 'Выберите элемент',
                 selectedId: '2',
                 errorText: 'Выберите время*',
                 nameSelect: 'select-time',
@@ -165,7 +166,6 @@
                 }
             });
             const select2 = new SelectUI('#select-ui-estate-size', {
-                placeholder: 'Выберите элемент',
                 selectedId: '2',
                 errorText: 'Выберите время*',
                 nameSelect: 'select-time',
