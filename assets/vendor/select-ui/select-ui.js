@@ -1,4 +1,4 @@
-class SelectUI{
+export class SelectUI{
     constructor(selector, options){
         this.$el = document.querySelector(selector);
         this.selectedId = options.selectedId;
@@ -112,7 +112,7 @@ class SelectUI{
 
     clickHandler(event){     
         const {type} = event.target.dataset;
-        
+
         if (type === 'input' || type === 'value'){
             this.toggle();
         } else if (type === 'item'){

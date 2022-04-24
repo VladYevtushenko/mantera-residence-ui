@@ -1,4 +1,4 @@
-const data = [
+export const data = [
     {
         name: "Резеденции", 
         id: "residences",
@@ -10,10 +10,23 @@ const data = [
                     {
                         number: '1',
                         floor: '1',
-                        name: 'Apartment',
+                        name: 'Studio',
                         square: '23',
                         detail: {
-                            image: [
+                            imageLink: [
+                                'https://',
+                            ],
+                            pdf: 'https://',
+                            view: 'https://',
+                        }
+                    },
+                    {
+                        number: '1',
+                        floor: '1',
+                        name: 'Studio',
+                        square: '23',
+                        detail: {
+                            imageLink: [
                                 'https://',
                             ],
                             pdf: 'https://',
@@ -22,58 +35,144 @@ const data = [
                     }
                 ]
             },
-            {name: "Резеденция с одной спальней"},
-            {name: "Резеденция с двумя спальней"},
+            {
+                name: "Резеденция с одной спальней",
+                id: "one-bed-residence",
+                items: [
+                    {
+                        number: '1',
+                        floor: '1',
+                        name: 'one-bed',
+                        square: '23',
+                        detail: {
+                            imageLink: [
+                                'https://',
+                            ],
+                            pdf: 'https://',
+                            view: 'https://',
+                        }
+                    }
+                ]
+            },
+            {
+                name: "Резеденция с двумя спальнями",
+                id: "two-bed-residence",
+                items: [
+                    {
+                        number: '1',
+                        floor: '1',
+                        name: 'two-bed',
+                        square: '23',
+                        detail: {
+                            imageLink: [
+                                'https://',
+                            ],
+                            pdf: 'https://',
+                            view: 'https://',
+                        }
+                    },
+                    {
+                        number: '2',
+                        floor: '2',
+                        name: 'two-bed',
+                        square: '25',
+                        detail: {
+                            imageLink: [
+                                'https://',
+                            ],
+                            pdf: 'https://',
+                            view: 'https://',
+                        }
+                    },
+                    {
+                        number: '3',
+                        floor: '3',
+                        name: 'two-bed',
+                        square: '21',
+                        detail: {
+                            imageLink: [
+                                'https://',
+                            ],
+                            pdf: 'https://',
+                            view: 'https://',
+                        }
+                    }
+                ]
+            },
+            {
+                name: "Резеденция с тремя спальнями",
+                id: "three-bed-residence",
+                items: [
+                    {
+                        number: '1',
+                        floor: '1',
+                        name: 'three-bed',
+                        square: '23',
+                        detail: {
+                            imageLink: [
+                                'https://',
+                            ],
+                            pdf: 'https://',
+                            view: 'https://',
+                        }
+                    }
+                ]
+            },
         ]
     },
-    { name: "Пентхаусы" },
-    { name: "Урбан-Виллы" },
+    { 
+        name: "Пентхаусы",
+        id: "penthouses",
+        items: [
+            {
+                name: "Резеденция с четырмя спальнями",
+                id: "four-beds-residence",
+                items: [
+                    {
+                        number: '1',
+                        floor: '1',
+                        name: 'Penthouse',
+                        square: '23',
+                        detail: {
+                            imageLink: [
+                                'https://',
+                            ],
+                            pdf: 'https://',
+                            view: 'https://',
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    { 
+        name: "Урбан-Виллы", 
+        id: "Urban-Villas",
+        items: [
+            {
+                name: "villa",
+                id: "villa",
+                items: [
+                    {
+                        number: '1',
+                        floor: '1',
+                        name: 'villa',
+                        square: '23',
+                        detail: {
+                            imageLink: [
+                                'https://',
+                            ],
+                            pdf: 'https://',
+                            view: 'https://',
+                        }
+                    }
+                ]
+            }
+        ]
+    },
 ];
 
 // ---------------------- //
 
-const selectData = data.map(el => {
-    return {value: el.name, id: el.id, dataProp: el.id}
-});
 
-const select = new SelectUI('#select-ui', {
-    placeholder: 'Выберите элемент',
-    selectedId: '2',
-    errorText: 'Выберите время*',
-    nameSelect: 'select-time',
-    selectedDataProp: '1',
-    data: selectData,
-    onSelect(item) {
-        document.getElementById("slidermy").style.display = 'none';
-        document.getElementById("image").style.display = 'block';
 
-        const selected = item.id;
-        createSecondSelect(selected);
-    }
-});
-
-const selected = "residences";
-
-createSecondSelect(selected);
-
-function createSecondSelect(firstSelectId) {
-    const selected = firstSelectId;
-
-    const selectInner = data.find((el) => el.id === selected);
-    
-    const selectInnerData = selectInner.map(el => {
-        return {value: el.name, id: el.id, dataProp: el.id}
-    })
-    
-    const select2 = new SelectUI('#select-ui-2', {
-        placeholder: 'Выберите элемент',
-        selectedId: '2',
-        errorText: 'Выберите время*',
-        nameSelect: 'select-time',
-        selectedDataProp: '1',
-        data: selectInnerData,
-        onSelect(item) {
-            console.log('selected Item', item)
-        }
-    });
-}
