@@ -17,10 +17,11 @@ document.addEventListener("DOMContentLoaded", function () {
         selectedId: 'residence-studio',
         data: selectInnerData,
         onSelect(item) {
-            document.getElementById("table-element").classList.add('row_visible');
+            // document.getElementById("table-element").classList.add('row_visible');
 
             const resTable = createTable(data[0].items[0].items);
-            document.querySelector('#table-element').innerHTML = resTable;
+            console.log(resTable);
+            resTable.map(tr => document.querySelector('#table-element').append(tr))
         }
     });
     console.log(select2);
@@ -51,17 +52,44 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 })
 
-function createTableRow (row) {
-    
-    return `
-    <tr class="table-row element-hover" id="table-row${row.id}">
-                            <td class="residence-info-table__rows" id="number">${row.number}</td>
-                            <td class="residence-info-table__rows" id="floor">${row.floor}</td>
-                            <td class="residence-info-table__rows" id="name">${row.name}</td>
-                            <td class="residence-info-table__rows" id="square">${row.square}</td>
-                        </tr>`
+function createTableRow(row) {
+
+    const tr = document.createElement("tr");
+    tr.classList.add("table-row");
+    tr.classList.add("element-hover");
+    tr.id = `tr-${row.number}`;
+    tr.setAttribute('data-item', JSON.stringify(row.detail));
+
+    tr.innerHTML = `
+        <td class="residence-info-table__rows">${row.number}</td>
+        <td class="residence-info-table__rows">${row.floor}</td>
+        <td class="residence-info-table__rows">${row.name}</td>
+        <td class="residence-info-table__rows">${row.square}</td>
+    `;
+
+    tr.addEventListener('click', event => {
+        event.stopPropagation();
+        console.log(event)
+        showDetail(JSON.parse(event.path[1].getAttribute('data-item')))
+    })
+
+    console.log(tr);
+
+    return tr;
+
 }
 
-function createTable (rows) {
+function createTable(rows) {
     return rows.map(row => createTableRow(row));
+}
+
+function showDetail(detail) {
+    console.log(detail);
+    const container = document.querySelector("#image");
+    container.querySelector("img").setAttribute("src", detail.imageLink[0]);
+    container.querySelector("#pdf a").setAttribute("href", detail.pdf);
+    container.querySelector("#view a").setAttribute("href", detail.view);
+
+    container.classList.add("row_visible");
+    document.querySelector("#slidermy").classList.add("row_hidden");
 }

@@ -14,20 +14,20 @@ export const data = [
                         square: '23',
                         detail: {
                             imageLink: [
-                                'https://',
+                                'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png',
                             ],
-                            pdf: 'https://',
-                            view: 'https://',
+                            pdf: 'https://123',
+                            view: 'https://123321',
                         }
                     },
                     {
-                        number: '1',
+                        number: '2',
                         floor: '1',
                         name: 'Studio',
                         square: '23',
                         detail: {
                             imageLink: [
-                                'https://',
+                                'https://mantera-residence.ru/upload/iblock/273/xg8iy2y3nlljcuuy9rukjoqynyn6w6ji.png',
                             ],
                             pdf: 'https://',
                             view: 'https://',

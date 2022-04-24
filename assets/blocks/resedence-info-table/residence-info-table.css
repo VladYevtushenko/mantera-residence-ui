@@ -1,9 +1,9 @@
 .residence-info-table {
-    width: 46%;
+    width: 100%;
     margin-top: 20px;
 }
 
-@media screen and (max-width: 1250px) {
+/* @media screen and (max-width: 1250px) {
     .residence-info-table {
         width: 56%;
     }
@@ -14,4 +14,4 @@
         width: 90%;
     }
 }
-
+ */

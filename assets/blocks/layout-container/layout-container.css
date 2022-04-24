@@ -1,3 +1,8 @@
+.half-width {
+    width: 50%;
+    min-height: 1px;
+}
+
 .layout-container {
     width: 50%;
     padding-left: 80px;
