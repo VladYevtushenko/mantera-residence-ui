@@ -5,3 +5,24 @@
     justify-content: center;
     align-content: flex-start;
 }
+
+@media screen and (max-width: 1000px) {
+    .nav {
+        width: 60%;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 729px) {
+    .nav {
+        width: 80%;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 554px) {
+    .nav {
+        width: 100%;
+        align-items: center;
+    }
+}

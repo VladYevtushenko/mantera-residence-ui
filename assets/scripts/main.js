@@ -17,8 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
         selectedId: 'residence-studio',
         data: selectInnerData,
         onSelect(item) {
-            // document.getElementById("table-element").classList.add('row_visible');
-
             const resTable = createTable(data[0].items[0].items);
             console.log(resTable);
             resTable.map(tr => document.querySelector('#table-element').append(tr))

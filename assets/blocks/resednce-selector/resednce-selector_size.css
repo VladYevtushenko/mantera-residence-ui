@@ -15,3 +15,10 @@
     min-width: 300px;
     }
 }
+
+@media screen and (max-width: 340px) {
+    .resednce-selector_size {
+    margin-bottom: 10px;
+    min-width: 280px;
+    }
+}
