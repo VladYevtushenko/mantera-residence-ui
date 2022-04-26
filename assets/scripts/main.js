@@ -1,5 +1,7 @@
 import { data } from "../scripts/array1.js";
 import { SelectUI } from "../vendor/select-ui/select-ui.js";
+import '../css/index.css';
+import '../vendor/vendor.js';
 
 const selectData = data.map(el => {
     return { value: el.name, id: el.id, dataProp: el.id }
