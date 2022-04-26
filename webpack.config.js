@@ -4,7 +4,7 @@ const HtmlWebpackPluglin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    entry: { main: './src/pages/index.js' },
+    entry: { main: './assets/scripts/main.js' },
     output: { 
         path: path.resolve(__dirname, 'dist'),
         filename: 'main.js',
@@ -21,7 +21,7 @@ module.exports = {
         rules: [ 
             {
                 test: /\.js$/,
-                use: 'babel-loader',
+                // use: 'babel-loader',
                 exclude: '/node_modules/'
             },
             {
@@ -35,8 +35,9 @@ module.exports = {
                     options: {
                         importLoaders: 1
                     }
-                },
-                    'postcss-loader'
+                }
+                // ,
+                    // 'postcss-loader'
                 ]
             },
         ]
@@ -44,7 +45,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPluglin({ 
-            template: './src/index.html'
+            template: './index.html'
         }),
         new MiniCssExtractPlugin()
     ],

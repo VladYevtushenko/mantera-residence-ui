@@ -100,7 +100,7 @@
 }
 
 .select-ui__input--checkbox:checked+.select-ui__name--checkbox::after {
-    background: #71878d url('/assets/images/icons/checkbox-light.svg') center center no-repeat;
+    /* background: #71878d url('/assets/images/icons/checkbox-light.svg') center center no-repeat; */
 }
 
 .select-ui.open .select-ui__dropdown {
@@ -224,7 +224,7 @@
     display: block;
     width: 25px;
     height: 25px;
-    background: url('../images/icons/check-dark.svg') center center no-repeat;
+    /* background: url('../images/icons/check-dark.svg') center center no-repeat; */
     position: absolute;
     top: 50%;
     right: 24px;
