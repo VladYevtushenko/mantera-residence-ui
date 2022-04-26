@@ -4,7 +4,7 @@ export class SelectUI{
         this.selectedId = options.selectedId;
         this.selectedDataProp = options.selectedDataProp;
         this.data = options.data || [];
-        // this.placeholder = options.placeholder || 'Placeholder по умолч.';
+        this.placeholder = options.placeholder || 'Placeholder по умолч.';
         this.errorText = options.errorText || '';
         this.nameSelect = options.nameSelect || 'select';
         this.fakeSelect = document.querySelector('.select-ui-fake'); 
@@ -34,7 +34,7 @@ export class SelectUI{
 
     getTemplate = () => {
         let cls = '';
-        // this.valueInput = this.placeholder;
+        this.valueInput = this.placeholder;
 
         if (this.selectedDataProp || this.selectedId) {
             if (this.selectedDataProp === undefined) {

@@ -11,27 +11,34 @@ document.addEventListener("DOMContentLoaded", function () {
     const selectInnerData = selectInner.items.map(el => {
         return { value: el.name, id: el.id, dataProp: el.id }
     })
-    console.log(selectInnerData);
 
     const select2 = new SelectUI('#select-ui-estate-size', {
-        selectedId: 'residence-studio',
+        // selectedId: 'residence-studio',
+        placeholder: "Количество спален",
         data: selectInnerData,
         onSelect(item) {
-            const resTable = createTable(data[0].items[0].items);
-            console.log(resTable);
+            const selected = window.select.selectedId;
+            const selectInner = data.find((el) => el.id === selected);
+
+            const selected2 = item.id;
+            const selectInner2 = selectInner.items.find((el) => el.id === selected2);
+
+            const resTable = createTable(selectInner2.items);
+            document.querySelector('#table-element').innerHTML = "";
             resTable.map(tr => document.querySelector('#table-element').append(tr))
         }
     });
-    console.log(select2);
 
-    const select = new SelectUI('#select-ui-estate-type', {
+    window.select = new SelectUI('#select-ui-estate-type', {
         selectedId: 'residences',
         data: selectData,
         onSelect(item) {
+            document.querySelector('#table-element').innerHTML = "";
+
             const selected = item.id;
-            console.log(selected);
             const selectInner = data.find((el) => el.id === selected);
             select2.destroy();
+            select2.valueInput = "Количество спален";
             select2.data = selectInner.items.map(el => {
                 return { value: el.name, id: el.id, dataProp: el.id }
             })
@@ -59,19 +66,16 @@ function createTableRow(row) {
     tr.setAttribute('data-item', JSON.stringify(row.detail));
 
     tr.innerHTML = `
-        <td class="residence-info-table__rows">${row.number}</td>
-        <td class="residence-info-table__rows">${row.floor}</td>
+        <td class="residence-info-table__rows"><span>№</span><span class="residence-info-table__head">${row.number}</span></td>
+        <td class="residence-info-table__rows"><span>этаж:</span>&nbsp;${row.floor}</td>
         <td class="residence-info-table__rows">${row.name}</td>
-        <td class="residence-info-table__rows">${row.square}</td>
+        <td class="residence-info-table__rows"><span class="residence-info-table__head">${row.square}</span><span>&nbsp;кв.м.</span></td>
     `;
 
     tr.addEventListener('click', event => {
         event.stopPropagation();
-        console.log(event)
         showDetail(JSON.parse(event.path[1].getAttribute('data-item')))
     })
-
-    console.log(tr);
 
     return tr;
 
@@ -82,7 +86,6 @@ function createTable(rows) {
 }
 
 function showDetail(detail) {
-    console.log(detail);
     const container = document.querySelector("#image");
     container.querySelector("img").setAttribute("src", detail.imageLink[0]);
     container.querySelector("#pdf a").setAttribute("href", detail.pdf);

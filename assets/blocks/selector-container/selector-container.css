@@ -14,7 +14,7 @@
     .selector-container {
         flex-direction: column;
         justify-content: flex-start;
-        width: 80%;
+        width: 100%;
     }
 }
 

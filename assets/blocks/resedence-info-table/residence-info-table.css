@@ -3,6 +3,10 @@
     margin-top: 20px;
 }
 
+.residence-info-table__head {
+    font: 2.5rem/3.6rem "Favorit Pro", Arial, Helvetica, sans-serif;
+}
+
 /* @media screen and (max-width: 1250px) {
     .residence-info-table {
         width: 56%;

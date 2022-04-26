@@ -1,6 +1,8 @@
 .slider__container {
     padding: 50px;
     width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 @media screen and (max-width: 1270px) {
@@ -9,9 +11,11 @@
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 992px) {
     .slider__container {
-        width: 70%;
+        padding-left: 50px;
+        padding-right: 50px;
+        /* width: 70%; */
     }
 }
 

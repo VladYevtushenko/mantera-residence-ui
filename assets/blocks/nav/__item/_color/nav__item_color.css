@@ -2,7 +2,7 @@
     background-color: rgb(113, 135, 141);
     color: #f8f9fa;
     font-family: "Favorit Pro", Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    display: block;
     letter-spacing: 1.2px;
     font-weight: 200;
 }
